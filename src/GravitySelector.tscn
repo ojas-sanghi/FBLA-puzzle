@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/grav selector button.png" type="Texture" id=1]
-[ext_resource path="res://assets/grav selector button hover.png" type="Texture" id=2]
-[ext_resource path="res://assets/grav selector button pressed.png" type="Texture" id=3]
-[ext_resource path="res://GravitySelector.gd" type="Script" id=4]
+[ext_resource path="res://src/GravitySelector.gd" type="Script" id=1]
+[ext_resource path="res://assets/grav selector button.png" type="Texture" id=2]
+[ext_resource path="res://assets/grav selector button hover.png" type="Texture" id=3]
+[ext_resource path="res://assets/grav selector button pressed.png" type="Texture" id=4]
 
 [node name="GravitySelector" type="Control"]
 anchor_right = 0.108
 anchor_bottom = 0.138
 margin_right = 0.407997
 margin_bottom = 0.199997
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -22,9 +22,9 @@ margin_top = -0.25
 margin_right = 846.0
 margin_bottom = 595.434
 rect_scale = Vector2( 0.137804, 0.137804 )
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 2 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -38,9 +38,9 @@ margin_right = 964.512
 margin_bottom = 612.046
 rect_rotation = 89.9999
 rect_scale = Vector2( 0.137804, 0.137804 )
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 2 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -54,9 +54,9 @@ margin_right = 941.512
 margin_bottom = 745.046
 rect_rotation = 180.0
 rect_scale = Vector2( 0.137804, 0.137804 )
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 2 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -70,9 +70,9 @@ margin_right = 810.012
 margin_bottom = 720.546
 rect_rotation = -89.9999
 rect_scale = Vector2( 0.137804, 0.137804 )
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 2 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

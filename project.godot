@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Actor",
 "language": "GDScript",
-"path": "res://Actors/Actor.gd"
+"path": "res://src/Actors/Actor.gd"
 }, {
 "base": "Actor",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Player.gd"
+"path": "res://src/Actors/Player.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
@@ -27,12 +27,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Fbla-puzzle"
-run/main_scene="res://TestScene.tscn"
+run/main_scene="res://src/TestScene.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Signals="*res://Signals.gd"
+Signals="*res://src/Signals.gd"
 
 [input]
 

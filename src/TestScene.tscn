@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://DragSelect.gd" type="Script" id=1]
-[ext_resource path="res://ingore.gd" type="Script" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/DragSelect.gd" type="Script" id=1]
+[ext_resource path="res://src/ingore.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 511.066, 18.0576 )
