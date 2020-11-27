@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/GravitySelect/GravitySelector.gd" type="Script" id=1]
+[ext_resource path="res://assets/buttons/gravity selector/hover.png" type="Texture" id=2]
+[ext_resource path="res://assets/buttons/gravity selector/pressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/buttons/gravity selector/normal.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/gravity selector/bitmask.png" type="BitMap" id=5]
+
+[node name="GravitySelector" type="Control"]
+anchor_right = 0.108
+anchor_bottom = 0.138
+margin_left = 19.5288
+margin_right = 19.9368
+margin_bottom = 0.199997
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+texture_click_mask = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="TextureButton" parent="."]
+margin_left = 106.778
+margin_top = 17.3239
+margin_right = 195.778
+margin_bottom = 57.3239
+rect_rotation = 89.9986
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+texture_click_mask = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Down" type="TextureButton" parent="."]
+margin_left = 89.0
+margin_top = 122.212
+margin_right = 178.0
+margin_bottom = 162.212
+rect_rotation = 179.963
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+texture_click_mask = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="TextureButton" parent="."]
+margin_left = -17.9539
+margin_top = 105.833
+margin_right = 71.0461
+margin_bottom = 145.833
+rect_rotation = -89.9506
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+texture_click_mask = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

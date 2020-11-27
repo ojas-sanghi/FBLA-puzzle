@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grav selector button pressed.png-f66c31cfbb473e8f7488c3da8d0bbd0a.stex"
+path="res://.import/pressed.png-fef32b247fe7c25652857cc8aea20d67.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grav selector button pressed.png"
-dest_files=[ "res://.import/grav selector button pressed.png-f66c31cfbb473e8f7488c3da8d0bbd0a.stex" ]
+source_file="res://assets/buttons/gravity selector/pressed.png"
+dest_files=[ "res://.import/pressed.png-fef32b247fe7c25652857cc8aea20d67.stex" ]
 
 [params]
 

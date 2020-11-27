@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/bitmask.png-85276163cdb0e9017e9da0343791a72e.res"
+
+[deps]
+
+source_file="res://assets/buttons/gravity selector/bitmask.png"
+dest_files=[ "res://.import/bitmask.png-85276163cdb0e9017e9da0343791a72e.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5
