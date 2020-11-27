@@ -8,12 +8,13 @@ var selector_button
 var drag_start: Vector2  # Location where drag began.
 var drag_end: Vector2 # Location where drag ended
 
-var base_anti_gravity = preload("res://src/BaseAntiGravity.tscn")
+var base_anti_gravity = preload("res://src/GravitySelect/BaseAntiGravity.tscn")
 
 func _ready() -> void:
 	Signals.connect("gravity_selected", self, "make_area")
 
 func _unhandled_input(event):
+	# code to draw selector rectangle
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed:
 			drag_start = event.position
@@ -66,7 +67,7 @@ func make_area(direction: String):
 
 
 func show_selector_button():
-	selector_button = preload("res://src/GravitySelector.tscn").instance()
+	selector_button = preload("res://src/GravitySelect/GravitySelector.tscn").instance()
 
 	selector_button.rect_global_position = (drag_end + drag_start) / 2
 	add_child(selector_button)

@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/LightEmitter.gd" type="Script" id=2]
-[ext_resource path="res://src/StaticBody2D.gd" type="Script" id=3]
-
+[ext_resource path="res://src/Interactables/LightEmitter.gd" type="Script" id=2]
+[ext_resource path="res://src/Interactables/ReflectingTriangle.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 67.9813, 48.8174 )
