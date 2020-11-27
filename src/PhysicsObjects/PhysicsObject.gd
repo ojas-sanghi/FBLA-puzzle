@@ -19,12 +19,10 @@ func _on_entered_antigravity(direction: String, body: Node):
 		"left":
 			linear_velocity.y = 0
 			applied_force = Vector2(-150, 0)
-#			linear_velocity = Vector2(-150, 0)
 			gravity_scale = 0
 		"right":
 			linear_velocity.y = 0
 			applied_force = Vector2(150, 0)
-#			linear_velocity = Vector2(150, 0)
 			gravity_scale = 0
 
 func _on_exited_antigravity(body: Node):

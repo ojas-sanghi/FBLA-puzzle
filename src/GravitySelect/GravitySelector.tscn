@@ -69,3 +69,7 @@ texture_click_mask = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Up" to="." method="_on_Up_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
+[connection signal="pressed" from="Down" to="." method="_on_Down_pressed"]
+[connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]

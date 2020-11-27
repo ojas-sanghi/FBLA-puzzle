@@ -22,7 +22,7 @@ func _physics_process(delta):
 	if in_antigravity:
 		is_snapping = Vector2(0, 0)
 	_velocity = move_and_slide_with_snap(
-		_velocity, is_snapping, FLOOR_NORMAL, true, 4,  0.9, true
+		_velocity, is_snapping, FLOOR_NORMAL, true, 4,  0.9, false
 	)
 	# When the character’s direction changes, we want to to scale the Sprite accordingly to flip it.
 	# This will make Robi face left or right depending on the direction you move.
@@ -51,10 +51,18 @@ func calculate_move_velocity(
 	):
 	var velocity = linear_velocity
 	velocity.x = speed.x * direction.x
+
 	if direction.y != 0.0:
 		velocity.y = speed.y * direction.y
 	if is_jump_interrupted:
 		velocity.y = 0.0
+
+	if in_antigravity:
+		if antigravity_direction == "right":
+			velocity = Vector2(speed.x, 0)
+		elif antigravity_direction == "left":
+			velocity = Vector2(-speed.x, 0)
+
 	return velocity
 
 
