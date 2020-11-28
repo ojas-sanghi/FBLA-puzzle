@@ -166,4 +166,5 @@ polygon = PoolVector2Array( 3.03237, -26.9861, -3.35342, -26.9861, -6.545, -23.9
 current = true
 limit_left = 0
 limit_top = 0
-limit_bottom = 600
+limit_right = 1920
+limit_bottom = 1080

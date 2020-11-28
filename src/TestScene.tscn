@@ -9,7 +9,7 @@
 extents = Vector2( 511.066, 18.0576 )
 
 [node name="TestScene" type="Node2D"]
-position = Vector2( 28, 19.0488 )
+position = Vector2( 74.9781, 207.982 )
 script = ExtResource( 1 )
 
 [node name="staticbodies" type="Node2D" parent="."]
@@ -18,7 +18,7 @@ script = ExtResource( 1 )
 position = Vector2( 66.6708, 19.0488 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="staticbodies/StaticBody2D"]
-position = Vector2( 439.845, 0 )
+position = Vector2( 439.845, -167.454 )
 shape = SubResource( 1 )
 disabled = true
 
