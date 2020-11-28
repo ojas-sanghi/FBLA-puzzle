@@ -13,7 +13,7 @@ var base_anti_gravity = preload("res://src/GravitySelect/BaseAntiGravity.tscn")
 func _ready() -> void:
 	Signals.connect("gravity_selected", self, "make_area")
 
-func _unhandled_input(event):
+func _unhandled_input(event: InputEvent) -> void:
 	# code to draw selector rectangle
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed:
@@ -21,19 +21,16 @@ func _unhandled_input(event):
 
 			dragging = true
 			# if there was already a drawing, get rid of the pre-existing gravity selector
-			if drawing_paused:
-				if selector_button:
-					selector_button.queue_free()
+			if drawing_paused and selector_button:
+				selector_button.queue_free()
 			drawing_paused = false
 
 		# Button released while dragging.
 		elif dragging:
 			drag_end = event.position
-
 			dragging = false
 			drawing_paused = true
 			if drag_start != drag_end:
-
 				update()
 				show_selector_button()
 

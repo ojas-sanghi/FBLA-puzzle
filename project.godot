@@ -38,7 +38,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Signals="*res://src/Signals.gd"
+Signals="*res://src/Singletons/Signals.gd"
 
 [input]
 
