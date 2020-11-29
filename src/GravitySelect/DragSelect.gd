@@ -13,7 +13,7 @@ var base_anti_gravity = preload("res://src/GravitySelect/BaseAntiGravity.tscn")
 func _ready() -> void:
 	Signals.connect("gravity_selected", self, "make_area")
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(event):
 	# code to draw selector rectangle
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed:
@@ -21,13 +21,13 @@ func _unhandled_input(event: InputEvent) -> void:
 
 			dragging = true
 			# if there was already a drawing, get rid of the pre-existing gravity selector
-			if drawing_paused and selector_button:
-				selector_button.queue_free()
+			if drawing_paused:
+				if selector_button:
+					selector_button.queue_free()
 			drawing_paused = false
 
 		# Button released while dragging.
 		elif dragging:
-			drag_end = event.position
 			dragging = false
 			drawing_paused = true
 			if drag_start != drag_end:
@@ -35,6 +35,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				show_selector_button()
 
 	if event is InputEventMouseMotion and dragging:
+		drag_end = get_local_mouse_position()
 		# Draw the box while dragging.
 		update()
 
@@ -42,12 +43,11 @@ func _unhandled_input(event: InputEvent) -> void:
 func make_area(direction: String):
 	# Load area2d, calculate extents
 	var area = base_anti_gravity.instance()
-	var new_extents = (drag_end - drag_start) / 2
 
 	# set all properties
 	# note: the reason the shape isn't shared between all the areas is because "resource local to scene" is ticked in BaseAntiGravity. Just FYI
-	area.get_node("CollisionShape2D").shape.extents = new_extents
-	area.global_position = (drag_end + drag_start) / 2
+	area.get_node("CollisionShape2D").shape.extents = (drag_end - drag_start) / 2
+	area.position = (drag_end + drag_start) / 2
 	area.direction = direction
 
 
@@ -66,13 +66,13 @@ func make_area(direction: String):
 func show_selector_button():
 	selector_button = preload("res://src/GravitySelect/GravitySelector.tscn").instance()
 
-	selector_button.rect_global_position = (drag_end + drag_start) / 2
+	selector_button.rect_position = drag_end
 	add_child(selector_button)
 
 
 func _draw():
 	if dragging:
-		selection_outline = Rect2(drag_start, get_global_mouse_position() - drag_start)
+		selection_outline = Rect2(drag_start, drag_end - drag_start)
 		# draw rectangle
 		draw_rect(selection_outline, Color("#0d2d50"), true)
 		# draw outline

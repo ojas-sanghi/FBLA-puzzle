@@ -7,3 +7,6 @@ signal gravity_selected
 
 signal entered_antigravity
 signal exited_antigravity
+
+func _ready() -> void:
+	OS.window_maximized = true
